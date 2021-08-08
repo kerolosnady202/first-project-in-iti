@@ -1,0 +1,237 @@
+*{
+box-sizing: border-box;
+}
+header{
+    margin-bottom: 10px;
+    height: 40px;
+    background-color: white;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+   position: relative;
+}
+header form  div{
+    display: inline-flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+header form  div input{
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    box-shadow: 1px 1px 5px rgb(85, 50, 50),-1px -1px 5px rgb(85, 50, 50);
+}
+header button{
+    position: absolute;
+    top: 10PX;
+    right: 25%;
+    width: 100PX;
+    background-color: rgb(250, 250, 9);
+    border-radius:25px;
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px 5px rgb(185, 176, 176),-2px -2px 5px rgb(185, 176, 176);
+    transition: background-color 1s;
+}
+header button:hover{
+    background-color: black;
+    color: white;
+}
+
+
+nav{
+    position: relative;
+    height: 100px;
+    background-color: rgb(153, 149, 144);
+}
+nav .logo{
+    position: absolute;
+    padding: 10px;
+    margin: 10px;
+   width: 25%;
+   display: flex;
+   top: 0px;
+   left: 0px;
+   
+}
+nav .logo div {
+    width: 60px;
+     height: 60px;
+     overflow: hidden;
+     border-radius:50% ;  
+     border: 5px solid blue; 
+     border-left-color: transparent; 
+    transition: transform 3s;
+    
+}
+nav .logo div img{
+    margin-right: 5px;
+    justify-content: center;
+    align-items: center;
+    transition: transform 3s; 
+   
+}
+
+nav .logo:hover div{
+  animation-name: rot;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes rot{
+    to{ transform: rotate(360deg) ;}
+}
+nav .logo h3{
+    color: chartreuse;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 0px;
+    text-shadow: 2px 2px 5px red;
+}
+
+nav .links{
+    position: absolute;
+    padding: 10px;
+   width: 75%;
+   display: flex;
+   top: 10px;
+   right: 0px;
+   
+}
+nav .links ul{
+    width: 100%;
+    list-style-type: none;
+}
+nav .links ul li{
+ display: inline;
+ margin-right: 60px;
+}
+nav .links ul li a{
+    text-decoration: none;
+    width: fit-content;
+    height: 20px;
+   }
+nav .links ul li a:hover{
+   background-color: black;
+   color: white;
+   padding: 10px;
+   border-radius:25px ;
+   }
+ .main{
+     height: 500px;
+     background-image: url(../tools/Pizza-photos.jpeg);
+     background-size: cover;
+     filter: grayscale(70%);
+     position: relative;
+ }
+ .main:hover{
+    filter: grayscale(0%); 
+}
+.main article{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(136%,-125%);
+    width: 38%;
+    margin: 30px;
+    color: white;
+    text-shadow: 1px 1px 5px yellow;
+}
+.main article .test div{
+    font-size: 50px;
+    font-weight: bold;
+    color: w;
+}
+.main article:hover div{
+    animation-name: move1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+
+}
+@keyframes move1{
+    25%{ transform: translate(-2px,-2px); }
+    50%{ transform: translate(0); }
+    75%{ transform: translate(-2px,-2px); }
+   100%{ transform: translate(0); }
+}
+
+.main article button{
+    width: 181PX;
+    height: 39PX;
+   font-weight: bold;
+    background-color: rgb(250, 250, 9);
+    border-radius:25px;
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px 5px rgb(185, 176, 176),-2px -2px 5px rgb(185, 176, 176);
+    transition: background-color 1s;
+}
+.main article button:hover{
+    background-color: black;
+    color: white;
+}
+.discount{
+     height: 280px;
+     background-color: rgb(153, 149, 144);
+    display: flex; 
+}
+.discount  div{
+    overflow: hidden;
+    width: calc(100% / 5);
+    text-align: center;
+    background-color: rgb(36, 34, 34);
+    transition: tranform 3s;
+}
+.discount div:hover{
+    background-color: transparent;
+   
+}
+
+.discount  div img {
+    height: 200px;
+    width: 100%;
+    border-radius: 50%;
+    transition: tranform 3s;
+}
+.discount div:hover img{
+    transform: scale(1.1) rotate(10deg);
+}
+.discount  div:hover p {
+   background-color: black;
+   color: white;
+   text-shadow: 1px 1px 5px rgb(250, 250, 9) ;
+   height: 25px;
+   border-radius: 25px;
+   text-align: center;
+   transform: scale(1.2);
+}
+footer{
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color:black;
+    color: white;
+    text-shadow: 1px 1px 5px yellow;
+}
+footer:hover .design{
+ animation-name: move2;
+ animation-duration: 2s;
+animation-iteration-count: infinite;
+}
+@keyframes move2{
+    25%{ transform: translatex(-10px); }
+    50%{ transform: translatex(0); }
+    75%{ transform: translatex(-10px); }
+   100%{ transform: translatex(0); }
+}
+footer:hover .cop{
+    animation-name: move3;
+    animation-duration: 2s;
+   animation-iteration-count: infinite;
+   }
+   @keyframes move3{
+       25%{ transform: translatex(10px); }
+       50%{ transform: translatex(0); }
+       75%{ transform: translatex(10px); }
+      100%{ transform: translatex(0); }
+   }
